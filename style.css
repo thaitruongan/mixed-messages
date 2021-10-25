@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#overview h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 500%;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
+
+#overview button {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 110%;
+    text-align: center;
+
+    color: white;
+    background-color: #26bf52;
+    outline: none;
+    border: 0px;
+    border-radius: 5px;
+
+    padding: 10px 24px;
+
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 65%;
+    left: 50%;
+}
+
+#overview button:hover {
+    background-color: #26bf5266;
+    color: black;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#overview button:active {
+    border: 0px;
+    background-color: #26bf52b3;
+}
+
+main {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+
+    overflow: hidden;
+}
+
+h2 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 200%;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+
+    padding: 10px 24px;
+
+    height: 200px;
+    text-align: center;
+}
+
+.column:nth-child(even) { color: black }
+
+.column:nth-child(odd){ color:  #26bf52 }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+button#reload {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 110%;
+    text-align: center;
+
+    color: white;
+    background-color: #26bf52;
+    outline: none;
+    border: 0px;
+    border-radius: 5px;
+
+    padding: 10px 24px;
+    margin: 0 45%;
+
+    cursor: pointer;
+}
+
+button#reload:hover {
+    background-color: #26bf5266;
+    color: black;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+button#reload:active {
+    border: 0px;
+    background-color: #26bf52b3;
+}
+
+@media only screen and (max-width: 600px) {
+    .column { 
+        width: 100%;
+        padding: 30px 5px;
+    }
+
+    button#reload { display: none }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .column {
+        width: 100%;
+        font-size: 150%;
+    }
+
+    #overview h1 { font-size: 700% }
+    
+    #overview button { font-size: 200% }
+
+    button#reload { display: none }
+}
